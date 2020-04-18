@@ -63,6 +63,10 @@ function reset() {
     }
     
     drawButton.disabled = false;
-    ticket1.innerHTML = 'ticket1';
-    ticket2.innerHTML = 'ticket2';
+    ticket1.innerHTML = '';
+    ticket1.style.top = "60%";
+    ticket1.classList.remove("animation");
+    ticket2.innerHTML = '';
+    ticket2.style.top = "60%";
+    ticket2.classList.remove("animation");
 }
