@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Le Bol à tons</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="outerWrapper">
+            <div id="wrapper">
+                <div id="title">Le Bol à tons</div>
+                <div id="drawTypeSelectionContainer">
+                    <select class="select" id="drawType" onchange="reset()">
+                        <option value="type-keys">tonalités</option>
+                        <option value="type-roots">fondamentales</option>
+                    </select>
+                </div>
+                <div id="mainActionsContainer">
+                    <button class="button" type="button" id="doDraw" onclick="draw()">Tirer</button>
+                    <button class="button" type="button" id="reset" onclick="reset()">Réinitialiser</button>
+                </div>
+                <div id="bowlContainer">
+                    <div class="drawResultContainer" id="ticket1"></div>
+                    <div class="drawResultContainer" id="ticket2"></div>
+                    <img id="bowl" src="./bowl.gif">
+                </div>
+            </div>
+        </div>
+    </body>
+    <script src="index.js"></script>
+</html>
