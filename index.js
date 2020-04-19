@@ -14,6 +14,9 @@ function noScroll()
 }
 
 window.addEventListener('scroll', noScroll);
+document.addEventListener('touchmove', function(e) {
+    e.preventDefault();
+})
 
 let roots = ['Do', 'Do<sup>#</sup>/Ré<sup>b</sup>', 'Ré', 'Mi<sup>b</sup>', 'Mi', 'Fa', 'Fa<sup>#</sup>', 'Sol', 'Sol<sup>#</sup>/La<sup>b</sup>', 
     'La', 'Si<sup>b</sup>', 'Si'];
