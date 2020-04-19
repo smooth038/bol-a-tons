@@ -8,6 +8,13 @@ let last = document.getElementById('ticket2');
 let ticket1 = document.getElementById('ticket1');
 let ticket2 = document.getElementById('ticket2');
 
+function noScroll()
+{
+    window.scrollTo(0, 0);
+}
+
+window.addEventListener('scroll', noScroll);
+
 let roots = ['Do', 'Do<sup>#</sup>/Ré<sup>b</sup>', 'Ré', 'Mi<sup>b</sup>', 'Mi', 'Fa', 'Fa<sup>#</sup>', 'Sol', 'Sol<sup>#</sup>/La<sup>b</sup>', 
     'La', 'Si<sup>b</sup>', 'Si'];
 let keys = ['Do majeur', 'Do mineur', 'Do<sup>#</sup>/Ré<sup>b</sup> majeur', 'Do<sup>#</sup> mineur', 'Ré majeur', 'Ré mineur', 'Mi<sup>b</sup> majeur', 
