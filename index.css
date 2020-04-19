@@ -75,6 +75,17 @@ div
     z-index: -1;
 }
 
+#ticketCount
+{
+    position: absolute;
+    width: 45px;
+    bottom: 0px;
+    left: 50%;
+    transform: translate(-27%, -65%);
+    color: black;
+    text-align: center;
+}
+
 #log
 {
     position: fixed;
@@ -123,6 +134,12 @@ sup
 .shake
 {
     animation: shake 0.75s;
+}
+
+#copyright
+{
+    padding-top: 30px;
+    font-size: smaller;
 }
 
 @keyframes my-animation

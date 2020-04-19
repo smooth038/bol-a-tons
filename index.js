@@ -16,52 +16,47 @@ let keys = ['Do majeur', 'Do mineur', 'Do<sup>#</sup>/Ré<sup>b</sup> majeur', '
     'Si majeur', 'Si mineur'];
 
 let bolATon = [];
-let elementCount = -1;
 reset();
 
 function draw() {
-    index = Math.floor(Math.random() * elementCount);
+    index = Math.floor(Math.random() * bolATon.length);
 
-    result = result == ticket1 ? ticket2 : ticket1;
-    last = last == ticket1 ? ticket2 : ticket1;
+    result = (result == ticket1) ? ticket2 : ticket1;
+    last = (last == ticket1) ? ticket2 : ticket1;
 
     last.classList.remove("animation");
-    last.innerHTML = "";
+    //last.innerHTML = "";
     last.style.top = "60%";
 
     bowlContainer.classList.add("shake");
     setTimeout(() => {
         bowlContainer.classList.remove("shake");
-        result.innerHTML = bolATon[index];
         result.classList.add("animation");
         result.style.top = "30%";  
+        ticketCount.innerHTML = bolATon.length;
     }, 500);
 
-    
-  
-    log.innerHTML = "Ticket1 : " + ticket1.innerHTML + " Ticket2 : " + ticket2.innerHTML + "<br>result : " + result.innerHTML + " last :" + last.innerHTML;
-
+    result.innerHTML = bolATon[index];
     bolATon.splice(index, 1);
-    if (--elementCount == 0)
+    if (bolATon.length == 0)
     {
         drawButton.disabled = true;
     }
 }
 
 function reset() {
-    // log.innerText = selection.value;
+    
     switch (selection.value)
     {
         case 'type-keys':
             bolATon = keys.slice();
-            elementCount = 24;
             break;
         case 'type-roots':
             bolATon = roots.slice();
-            elementCount = 12;
             break;
     }
     
+    ticketCount.innerHTML = bolATon.length;
     drawButton.disabled = false;
     ticket1.innerHTML = '';
     ticket1.style.top = "60%";
